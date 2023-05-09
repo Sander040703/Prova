@@ -1,0 +1,27 @@
+nome = []
+peso = []
+agua_ingerida = []
+quantidade_ideal = []
+quantidade_falta_ingerir = []
+
+nome = input("Digite o nome: ")
+peso = float(input("Digite seu peso : "))
+agua_ingerida = float(input("Digite a quantidade de água já ingerida : "))
+
+
+quantidade_ideal = peso * 35 / 1000
+
+
+quantidade_falta_ingerir = quantidade_ideal - agua_ingerida
+
+
+print(f"Nome: {nome}")
+print(f"Peso: {peso:.2f} kg")
+print(f"Quantidade de água ingerida: {agua_ingerida:.2f} L")
+print(f"Quantidade ideal de água a ingerir: {quantidade_ideal:.2f} L")
+
+
+if quantidade_falta_ingerir <= 0:
+    print("Parabéns, você atingiu a meta de hidratação diária!")
+else:
+    print(f"Continue focado em se hidratar por hoje, ainda faltam {quantidade_falta_ingerir:.2f} L! Você consegue!")
