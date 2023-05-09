@@ -1,0 +1,38 @@
+placa = []
+valor_litro = []
+km_60 = []
+km_80 = []
+km_100 = []
+km_120 = []
+km_140 = []
+
+
+placa = input("Qual é a placa do veículo? ")
+valor_litro = float(input("Qual é o valor do litro do combustível? "))
+km_60 = float(input("Quantos km foram rodados a 60 km/h? "))
+km_80 = float(input("Quantos km foram rodados a 80 km/h? "))
+km_100 = float(input("Quantos km foram rodados a 100 km/h? "))
+km_120 = float(input("Quantos km foram rodados a 120 km/h? "))
+km_140 = float(input("Quantos km foram rodados a 140 km/h? "))
+
+
+combustivel_60 = km_60 / 30.7 
+combustivel_80 = km_80 / 26.8
+combustivel_100 = km_100 / 22.4
+combustivel_120 = km_120 / 18.1
+combustivel_140 = km_140 / 14.5
+
+
+combustivel_total = combustivel_60 + combustivel_80 + combustivel_100 + combustivel_120 + combustivel_140
+custo_total = combustivel_total * valor_litro
+
+
+dist_total = km_60 + km_80 + km_100 + km_120 + km_140
+tempo_total = dist_total / 60
+vel_media_pond = dist_total / tempo_total
+
+
+print("\nPlaca do veículo: ", placa)
+print("Custo total da viagem: R$", format(custo_total, ".2f"))
+print("Velocidade média ponderada: ", format(vel_media_pond, ".2f"), "km/h")
+print("Quantidade total de combustível: ", format(combustivel_total, ".2f"), "litros")
